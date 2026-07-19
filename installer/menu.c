@@ -77,13 +77,7 @@ static struct UIMenuItem MainMenuItems[] = {
     {MITEM_BUTTON, MAIN_MENU_ID_BTN_INST, MITEM_FLAG_POS_MID, 0, 24, 0, 0, SYS_UI_LBL_INSTALL},
     {MITEM_BREAK},
     {MITEM_BREAK},
-    {MITEM_BUTTON, MAIN_MENU_ID_BTN_MI, MITEM_FLAG_POS_MID, 0, 24, 0, 0, SYS_UI_LBL_MI},
-    {MITEM_BREAK},
-    {MITEM_BREAK},
     {MITEM_BUTTON, MAIN_MENU_ID_BTN_UINST, MITEM_FLAG_POS_MID, 0, 24, 0, 0, SYS_UI_LBL_UINSTALL},
-    {MITEM_BREAK},
-    {MITEM_BREAK},
-    {MITEM_BUTTON, MAIN_MENU_ID_BTN_DOWNGRADE_MI, MITEM_FLAG_POS_MID, 0, 24, 0, 0, SYS_UI_LBL_UMI},
     {MITEM_BREAK},
     {MITEM_BREAK},
     {MITEM_BUTTON, MAIN_MENU_ID_BTN_EXIT, MITEM_FLAG_POS_MID, 0, 24, 0, 0, SYS_UI_LBL_EXIT},
@@ -102,15 +96,6 @@ static struct UIMenuItem ExtraMenuItems[] = {
     {MITEM_SEPERATOR},
     {MITEM_BREAK},
 
-    {MITEM_BUTTON, MAIN_MENU_ID_BTN_INST_CROSS_PSX, MITEM_FLAG_POS_MID, 0, 24, 0, 0, SYS_UI_LBL_INSTALL_CROSS_PSX},
-    {MITEM_BREAK},
-    {MITEM_BREAK},
-    {MITEM_BUTTON, MAIN_MENU_ID_BTN_INST_FHDB, MITEM_FLAG_POS_MID, 0, 24, 0, 0, SYS_UI_LBL_INSTALL_FHDB},
-    {MITEM_BREAK},
-    {MITEM_BREAK},
-    {MITEM_BUTTON, MAIN_MENU_ID_BTN_UINST_FHDB, MITEM_FLAG_POS_MID, 0, 24, 0, 0, SYS_UI_LBL_UINSTALL_FHDB},
-    {MITEM_BREAK},
-    {MITEM_BREAK},
     {MITEM_BUTTON, MAIN_MENU_ID_BTN_FORMAT_HDD, MITEM_FLAG_POS_MID, 0, 24, 0, 0, SYS_UI_LBL_FORMAT_HDD},
     {MITEM_BREAK},
     {MITEM_BREAK},
@@ -212,9 +197,9 @@ static struct UIMenuItem InsuffSpaceScreenItems[] = {
 static struct UIMenu InstallMainMenu;
 static struct UIMenu ExtraMenu;
 
-static struct UIMenu MCMenu = {NULL, &ExtraMenu, MCMenuItems, {{BUTTON_TYPE_SYS_SELECT, SYS_UI_LBL_OK}, {BUTTON_TYPE_SYS_CANCEL, SYS_UI_LBL_EXIT}}};
+static struct UIMenu MCMenu = {NULL, &InstallMainMenu, MCMenuItems, {{BUTTON_TYPE_SYS_SELECT, SYS_UI_LBL_OK}, {BUTTON_TYPE_SYS_CANCEL, SYS_UI_LBL_EXIT}}};
 static struct UIMenu ExtraMenu = {&MCMenu, &InstallMainMenu, ExtraMenuItems, {{BUTTON_TYPE_SYS_SELECT, SYS_UI_LBL_OK}, {BUTTON_TYPE_SYS_CANCEL, SYS_UI_LBL_EXIT}}};
-static struct UIMenu InstallMainMenu = {&ExtraMenu, NULL, MainMenuItems, {{BUTTON_TYPE_SYS_SELECT, SYS_UI_LBL_OK}, {BUTTON_TYPE_SYS_CANCEL, SYS_UI_LBL_EXIT}}};
+static struct UIMenu InstallMainMenu = {&MCMenu, NULL, MainMenuItems, {{BUTTON_TYPE_SYS_SELECT, SYS_UI_LBL_OK}, {BUTTON_TYPE_SYS_CANCEL, SYS_UI_LBL_EXIT}}};
 
 static struct UIMenu ProgressScreen = {NULL, NULL, ProgressScreenItems, {{BUTTON_TYPE_SYS_CANCEL, SYS_UI_LBL_CANCEL}, {-1, -1}}};
 static struct UIMenu InsuffSpaceScreen = {NULL, NULL, InsuffSpaceScreenItems, {{BUTTON_TYPE_SYS_SELECT, SYS_UI_LBL_OK}, {-1, -1}}};
@@ -306,14 +291,8 @@ static int MainMenuUpdateCallback(struct UIMenu *menu, unsigned short int frame,
                 case MAIN_MENU_ID_BTN_INST:
                     UISetString(menu, MAIN_MENU_ID_DESCRIPTION, GetUIString(SYS_UI_MSG_DSC_INST_FMCB));
                     break;
-                case MAIN_MENU_ID_BTN_MI:
-                    UISetString(menu, MAIN_MENU_ID_DESCRIPTION, GetUIString(SYS_UI_MSG_DSC_MI_FMCB));
-                    break;
                 case MAIN_MENU_ID_BTN_UINST:
                     UISetString(menu, MAIN_MENU_ID_DESCRIPTION, GetUIString(SYS_UI_MSG_DSC_UINST_FMCB));
-                    break;
-                case MAIN_MENU_ID_BTN_DOWNGRADE_MI:
-                    UISetString(menu, MAIN_MENU_ID_DESCRIPTION, GetUIString(SYS_UI_MSG_DSC_DOWNGRADE_MI));
                     break;
                 case MAIN_MENU_ID_BTN_FORMAT_MC:
                     UISetString(menu, MAIN_MENU_ID_DESCRIPTION, GetUIString(SYS_UI_MSG_DSC_FORMAT_MC));
@@ -323,15 +302,6 @@ static int MainMenuUpdateCallback(struct UIMenu *menu, unsigned short int frame,
                     break;
                 case MAIN_MENU_ID_BTN_REST_MC:
                     UISetString(menu, MAIN_MENU_ID_DESCRIPTION, GetUIString(SYS_UI_MSG_DSC_REST_MC));
-                    break;
-                case MAIN_MENU_ID_BTN_INST_CROSS_PSX:
-                    UISetString(menu, MAIN_MENU_ID_DESCRIPTION, GetUIString(SYS_UI_MSG_DSC_INST_CROSS_PSX));
-                    break;
-                case MAIN_MENU_ID_BTN_INST_FHDB:
-                    UISetString(menu, MAIN_MENU_ID_DESCRIPTION, GetUIString(SYS_UI_MSG_DSC_INST_FHDB));
-                    break;
-                case MAIN_MENU_ID_BTN_UINST_FHDB:
-                    UISetString(menu, MAIN_MENU_ID_DESCRIPTION, GetUIString(SYS_UI_MSG_DSC_UINST_FHDB));
                     break;
                 case MAIN_MENU_ID_BTN_FORMAT_HDD:
                     UISetString(menu, MAIN_MENU_ID_DESCRIPTION, GetUIString(SYS_UI_MSG_DSC_FORMAT_HDD));
@@ -371,14 +341,6 @@ void MainMenu(void)
     UISetString(&InstallMainMenu, MAIN_MENU_ID_VERSION, "v" FMCB_INSTALLER_VERSION);
     UISetString(&ExtraMenu, MAIN_MENU_ID_VERSION, "v" FMCB_INSTALLER_VERSION);
     UISetString(&MCMenu, MAIN_MENU_ID_VERSION, "v" FMCB_INSTALLER_VERSION);
-#ifdef ALLOW_MI
-    UISetEnabled(&InstallMainMenu, MAIN_MENU_ID_BTN_MI, GetPs2Type() == PS2_SYSTEM_TYPE_PS2);
-#else
-    UISetEnabled(&InstallMainMenu, MAIN_MENU_ID_BTN_MI, 0);
-#endif
-    UISetEnabled(&ExtraMenu, MAIN_MENU_ID_BTN_INST_CROSS_PSX, GetPs2Type() == PS2_SYSTEM_TYPE_PS2);
-    UISetEnabled(&ExtraMenu, MAIN_MENU_ID_BTN_INST_FHDB, IsHDDUnitConnected);
-    UISetEnabled(&ExtraMenu, MAIN_MENU_ID_BTN_UINST_FHDB, IsHDDUnitConnected);
     UISetEnabled(&ExtraMenu, MAIN_MENU_ID_BTN_FORMAT_HDD, IsHDDUnitConnected);
     CurrentMenu = &InstallMainMenu;
     option = 0;
@@ -395,14 +357,8 @@ void MainMenu(void)
             case MAIN_MENU_ID_BTN_INST:
                 event = EVENT_INSTALL;
                 break;
-            case MAIN_MENU_ID_BTN_MI:
-                event = EVENT_MULTI_INSTALL;
-                break;
             case MAIN_MENU_ID_BTN_UINST:
                 event = EVENT_CLEANUP;
-                break;
-            case MAIN_MENU_ID_BTN_DOWNGRADE_MI:
-                event = EVENT_CLEANUP_MULTI;
                 break;
             case MAIN_MENU_ID_BTN_FORMAT_MC:
                 event = EVENT_FORMAT;
@@ -413,17 +369,8 @@ void MainMenu(void)
             case MAIN_MENU_ID_BTN_REST_MC:
                 event = EVENT_RESTORE_MC;
                 break;
-            case MAIN_MENU_ID_BTN_INST_FHDB:
-                event = EVENT_INSTALL_FHDB;
-                break;
-            case MAIN_MENU_ID_BTN_UINST_FHDB:
-                event = EVENT_CLEANUP_FHDB;
-                break;
             case MAIN_MENU_ID_BTN_FORMAT_HDD:
                 event = EVENT_FORMAT_HDD;
-                break;
-            case MAIN_MENU_ID_BTN_INST_CROSS_PSX:
-                event = EVENT_INSTALL_CROSS_PSX;
                 break;
             default: // MAIN_MENU_ID_BTN_EXIT
                 event = EVENT_EXIT;
