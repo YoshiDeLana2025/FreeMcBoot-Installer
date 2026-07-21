@@ -168,31 +168,15 @@ static struct InstallationFile DEXSysFiles[DEX_SYS_INSTALL_NUM_FILES] = {
 
 #define PS2_SYS_HDDLOAD_INSTALL_NUM_FILES 3
 static struct InstallationFile PS2HDDLOADSysFiles[PS2_SYS_HDDLOAD_INSTALL_NUM_FILES] = {
-    {"SYSTEM/DEV9.IRX",
-     "BIEXEC-SYSTEM/dev9.irx",
-     0},
-    {"SYSTEM/ATAD.IRX",
-     "BIEXEC-SYSTEM/atad.irx",
-     0},
-    {"SYSTEM/HDDLOAD.IRX",
-     "BIEXEC-SYSTEM/hddload.irx",
-     0}};
+
+};
 
 #define PSX_SYS_INSTALL_NUM_FILES 3
-static struct InstallationFile PSXSysFiles[PSX_SYS_INSTALL_NUM_FILES] = {
-    {"SYSTEM/XFMCB.XLF",
-     "BREXEC-SYSTEM/xosdmain.elf",
-     FILE_IS_KELF},
-    {"SYSTEM/XUDNL.XRX",
-     "BREXEC-SYSTEM/xosdmain.irx",
-     FILE_IS_KELF},
-    {"SYSTEM/XENDVDPL.XRX",
-     "BREXEC-SYSTEM/xendvdpl.irx",
-     FILE_IS_KELF}};
+static struct InstallationFile PSXSysFiles[PSX_SYS_INSTALL_NUM_FILES] = {};
 
 #define SYS_FOLDER_RESOURCES_NUM_FILES 2
 static struct InstallationFile SysResourceFiles[SYS_FOLDER_RESOURCES_NUM_FILES] = {
-    {"SYSTEM/YOSHBOOT.ICN",
+    {"SYSTEM/yoshboot.icn",
      "BREXEC-SYSTEM/yoshboot.icn",
      0},
     {"SYSTEM/ICON.SYS",
@@ -219,102 +203,20 @@ static struct InstallationFile BaseFiles[BASE_INSTALL_NUM_FILES] = {
     {"SYS-CONF/icon.sys",
      "SYS-CONF/icon.sys",
      0},
-    {"SYS-CONF/YOSHCONF.ICN",
+    {"SYS-CONF/yoshconf.icn",
      "SYS-CONF/yoshconf.icn",
      0}};
 
 #define HDD_BASE_INSTALL_NUM_FILES 22
 static struct InstallationFile HDDBaseFiles[HDD_BASE_INSTALL_NUM_FILES] = {
-    {"SYS-CONF/FREEHDB.CNF",
-     "hdd0:__sysconf:pfs:/FMCB/FREEHDB.CNF",
-     0},
-    {"SYS-CONF/FMCB_CFG.ELF",
-     "hdd0:__sysconf:pfs:/FMCB/FMCB_CFG.ELF",
-     0},
-    {"SYS-CONF/USBD.IRX",
-     "hdd0:__sysconf:pfs:/FMCB/USBD.IRX",
-     0},
-    {"SYS-CONF/USBHDFSD.IRX",
-     "hdd0:__sysconf:pfs:/FMCB/USBHDFSD.IRX",
-     0},
-    // FSCK
-    {
-        "SYSTEM/FSCK/FSCK.XLF",
-        "hdd0:__system:pfs:/fsck/fsck.elf",
-        FILE_IS_KELF},
-    {"SYSTEM/FSCK/LANG/NotoSans-Bold.ttf",
-     "hdd0:__system:pfs:/fsck/lang/NotoSans-Bold.ttf",
-     0},
-    {"SYSTEM/FSCK/LANG/NotoSansJP-Bold.otf",
-     "hdd0:__system:pfs:/fsck/lang/NotoSansJP-Bold.otf",
-     0},
-    {"SYSTEM/FSCK/LANG/fonts.txt",
-     "hdd0:__system:pfs:/fsck/lang/fonts.txt",
-     0},
-    {"SYSTEM/FSCK/LANG/strings_JA.txt",
-     "hdd0:__system:pfs:/fsck/lang/strings_JA.txt",
-     0},
-    {"SYSTEM/FSCK/LANG/labels_JA.txt",
-     "hdd0:__system:pfs:/fsck/lang/labels_JA.txt",
-     0},
-    {"SYSTEM/FSCK/LANG/strings_FR.txt",
-     "hdd0:__system:pfs:/fsck/lang/strings_FR.txt",
-     0},
-    {"SYSTEM/FSCK/LANG/labels_FR.txt",
-     "hdd0:__system:pfs:/fsck/lang/labels_FR.txt",
-     0},
-    {"SYSTEM/FSCK/LANG/strings_SP.txt",
-     "hdd0:__system:pfs:/fsck/lang/strings_SP.txt",
-     0},
-    {"SYSTEM/FSCK/LANG/labels_SP.txt",
-     "hdd0:__system:pfs:/fsck/lang/labels_SP.txt",
-     0},
-    {"SYSTEM/FSCK/LANG/strings_GE.txt",
-     "hdd0:__system:pfs:/fsck/lang/strings_GE.txt",
-     0},
-    {"SYSTEM/FSCK/LANG/labels_GE.txt",
-     "hdd0:__system:pfs:/fsck/lang/labels_GE.txt",
-     0},
-    {"SYSTEM/FSCK/LANG/strings_IT.txt",
-     "hdd0:__system:pfs:/fsck/lang/strings_IT.txt",
-     0},
-    {"SYSTEM/FSCK/LANG/labels_IT.txt",
-     "hdd0:__system:pfs:/fsck/lang/labels_IT.txt",
-     0},
-    {"SYSTEM/FSCK/LANG/strings_DU.txt",
-     "hdd0:__system:pfs:/fsck/lang/strings_DU.txt",
-     0},
-    {"SYSTEM/FSCK/LANG/labels_DU.txt",
-     "hdd0:__system:pfs:/fsck/lang/labels_DU.txt",
-     0},
-    {"SYSTEM/FSCK/LANG/strings_PO.txt",
-     "hdd0:__system:pfs:/fsck/lang/strings_PO.txt",
-     0},
-    {"SYSTEM/FSCK/LANG/labels_PO.txt",
-     "hdd0:__system:pfs:/fsck/lang/labels_PO.txt",
-     0},
+
 };
 
 #define PS2_SYS_HDD_INSTALL_NUM_FILES 3
-static struct InstallationFile PS2SysHDDFiles[PS2_SYS_HDD_INSTALL_NUM_FILES] = {
-    {"SYSTEM/MBR.XLF",
-     "hdd0:__mbr",
-     FILE_IS_KELF},
-    {"SYSTEM/FHDB.XLF",
-     "hdd0:__system:pfs:/osd/osdmain.elf",
-     FILE_IS_KELF},
-    {"SYSTEM/ENDVDPL.XRX",
-     "hdd0:__sysconf:pfs:/FMCB/endvdpl.irx",
-     FILE_IS_KELF}};
+static struct InstallationFile PS2SysHDDFiles[PS2_SYS_HDD_INSTALL_NUM_FILES] = {};
 
 #define DEX_SYS_HDD_INSTALL_NUM_FILES 2
-static struct InstallationFile DEXSysHDDFiles[DEX_SYS_HDD_INSTALL_NUM_FILES] = {
-    {"SYSTEM/MBR.XLF",
-     "hdd0:__mbr",
-     FILE_IS_KELF},
-    {"SYSTEM/FHDB.XLF",
-     "hdd0:__system:pfs:/osd/osdmain.elf",
-     FILE_IS_KELF}};
+static struct InstallationFile DEXSysHDDFiles[DEX_SYS_HDD_INSTALL_NUM_FILES] = {};
 
 /* Remember to update NUM_CROSSLINKED_FILES in main.h appropriately!
     If folders are to be added/deleted from the list of supported folders, remember to update these functions:
