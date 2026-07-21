@@ -27,12 +27,12 @@ Velocità:
 Tempo rimanente:
 Installa
 Multi installazione
-Disinstalla FMCB
+Disinstalla YoshiBoot Autoboot
 Disinstalla MI
 Formatta MC
 Scarica MC
 Ripristina MC
-Installa FMCB (PSX)
+Installa YoshiBoot Autoboot (PSX)
 Installa FHDB
 Disinstalla FHDB
 Esci

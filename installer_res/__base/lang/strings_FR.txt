@@ -1,18 +1,18 @@
 ﻿Aucune CM PS2 n'a été détectée.
 Des CM ont été détectées dans les 2 fentes.\nChoisir la carte mémoire cible.
-FMCB va être installé sur la CM de la fente 1.\nContinuer?
-FMCB va être installé sur la CM de la fente 2.\nContinuer?
+YoshiBoot Autoboot va être installé sur la CM de la fente 1.\nContinuer?
+YoshiBoot Autoboot va être installé sur la CM de la fente 2.\nContinuer?
 FHDB va être installé sur le disque dur.\nContinuer?
-Installer FreeMcBoot pour:
+Installer YoshiBoot Autoboot pour:
 Échec de l'initialisation du cache.
-Fichier de conf. FMCB détecté!\nLe conserver?
+Fichier de conf. YoshiBoot Autoboot détecté!\nLe conserver?
 Fichier de conf. FHDB détecté!\nLe conserver?
 Échec de la suppression.
-Installation FMCB supprimée.
+Installation YoshiBoot Autoboot supprimée.
 Échec de l'installation. 
 Installation réussie. 
-FMCB sera supprimé de la CM de la fente 1.\nContinuer?
-FMCB sera supprimé de la CM de la fente 2.\nContinuer?
+YoshiBoot Autoboot sera supprimé de la CM de la fente 1.\nContinuer?
+YoshiBoot Autoboot sera supprimé de la CM de la fente 2.\nContinuer?
 FHDB sera supprimé du disque dur.\nContinuer?
 La CM de la fente 1 va être formatée.\n\nContinuer? 
 La CM de la fente 2 va être formatée.\n\nContinuer? 
@@ -47,20 +47,20 @@ Annuler la restauration de la CM?
 Echec de la création des liens croisés.
 Echec de la signature Magicgate sur la CM.
 Impossible de supprimer cette installation multi.
-Installe FMCB pour cette console. 
-Installe FMCB pour n'importe quelle PS2.
-Désinstalle FMCB.
+Installe YoshiBoot Autoboot pour cette console. 
+Installe YoshiBoot Autoboot pour n'importe quelle PS2.
+Désinstalle YoshiBoot Autoboot.
 Convertit une installation multi en normale. 
 Formate la carte mémoire.
 Crée une image de la carte mémoire.
 Restaure une image de la carte mémoire.
-Installe FMCB (pour PSX) sur cette carte mémoire.
+Installe YoshiBoot Autoboot (pour PSX) sur cette carte mémoire.
 Installe FHDB sur le disque dur.
 Désinstalle FHDB.
 Sortie de l'installateur.
 Problème au disque dur détecté.\nVeuillez lancer un test scan du disque.
 Échec du disque dur au test scan.\n\nCelui-ci doit être remplacé.
-BIOS 2.30:cette console ne pourra pas booter depuis FMCB. 
+BIOS 2.30:cette console ne pourra pas booter depuis YoshiBoot Autoboot. 
 Attention : l'installation multi utilise des fichiers système corrompus.\nL'installation de type Normal est recommandée.
 Quitter le programme?
 Le disque dur (HDD) n'est pas formatée.\nFormater ?\nAvertissement : Toutes les données seront effacées.

@@ -1,17 +1,17 @@
 OK
 Cancelar
 Sim
-Não
-Próximo
+Nï¿½o
+Prï¿½ximo
 Voltar
 Habilitado
 Desabilitado
-Alternar opção
+Alternar opï¿½ï¿½o
 Escolher campo
 Alerta
 Erro
-Informação
-Confirmação
+Informaï¿½ï¿½o
+Confirmaï¿½ï¿½o
 Slot 1
 Slot 2
 Memory Card
@@ -21,18 +21,18 @@ Instalando...
 Criando Imagem...
 Restaurando Imagem...
 Seu PS2 e modelos similares
-Qualquer PS2 da mesma região
+Qualquer PS2 da mesma regiï¿½o
 Qualquer PS2
 Taxa:
 Tempo\nrestante:
 Instalar
-Multi-instalação
-Desinstalar o FMCB
+Multi-instalaï¿½ï¿½o
+Desinstalar o YoshiBoot Autoboot
 Desinstalar o MI
 Formatara o MC
 Criar imagem do MC
 Restaurar o MC
-Instalar o FMCB (PSX)
+Instalar o YoshiBoot Autoboot (PSX)
 Instalar o FHDB
 Desinstalar o FHDB
 Sair
@@ -44,8 +44,8 @@ TB
 B/s
 KB/s
 MB/s
-Espaço Disponível:
-Espaço Requisitado:
+Espaï¿½o Disponï¿½vel:
+Espaï¿½o Requisitado:
 Menu Principal
 Menu Extra
 Menu do Memory Card

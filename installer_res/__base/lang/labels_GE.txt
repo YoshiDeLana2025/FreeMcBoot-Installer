@@ -27,12 +27,12 @@ Rate:
 Verbleibende\nZeit:
 Installieren
 Multi-install
-FMCB deinstallieren
+YoshiBoot Autoboot deinstallieren
 MI deinstallieren
 Formatiere MC
 Dumpe MC
 Wiederherstellung MC
-FMCB installieren (PSX)
+YoshiBoot Autoboot installieren (PSX)
 FHDB installieren
 FHDB deinstallieren
 Exit

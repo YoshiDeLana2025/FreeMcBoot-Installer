@@ -27,12 +27,12 @@ Velocidad:
 Tiempo\nrestante:
 Instalar
 Multi-Instalación
-Desinstalar FMCB
+Desinstalar YoshiBoot Autoboot
 Desinstalar I.M.
 Formatear T.M.
 Volcar T.M.
 Restaurar T.M.
-Instalar FMCB (PSX)
+Instalar YoshiBoot Autoboot (PSX)
 Instalar FHDB
 Desinstalar FHDB
 Salir

@@ -27,12 +27,12 @@ Vitesse:
 Temps\nrestant:
 Normale
 Multi
-Désinstaller FMCB
+Désinstaller YoshiBoot Autoboot
 Désinstaller multi
 Formater CM
 Créer image CM
 Restaurer image CM
-FMCB (PSX)
+YoshiBoot Autoboot (PSX)
 FHDB
 Désinstaller FHDB
 Quitter

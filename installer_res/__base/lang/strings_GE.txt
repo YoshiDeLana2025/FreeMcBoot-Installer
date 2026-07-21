@@ -1,18 +1,18 @@
 ﻿Keine Playstation 2 Memory Cards gefunden.
 In beiden Steckplätzen wurden Memory Cards gefunden Wähle den STeckplatz aus.
-FMCB wird auf der Memory Card in Steckplatz 1 installiert. Fortfahren?
-FMCB wird auf der Memory Card in Steckplatz 2 installiert. Fortfahren?
+YoshiBoot Autoboot wird auf der Memory Card in Steckplatz 1 installiert. Fortfahren?
+YoshiBoot Autoboot wird auf der Memory Card in Steckplatz 2 installiert. Fortfahren?
 FHDB wird auf der Festplatte installiert. Fortfahren?
-Installiere FreeMcBoot für:
+Installiere YoshiBoot Autoboot für:
 Cache Inititialisierung fehlgesclagen.
-FMCB CNF Datei wurde gefunden!\nMöchten sie diese auswählen?
+YoshiBoot Autoboot CNF Datei wurde gefunden!\nMöchten sie diese auswählen?
 FHDB CNF Datei wurde gefunden!\nMöchten sie diese auswählen?
 Bereinigung fehlgeschlagen.
 Die Installation wurde erfolgreich bereinigt.
 Installation fehlgeschlagen.
 Installation erfolgreich.
-FMCB auf der Memory Card in Steckplatz 1 wird bereinigt. Fortfahren?
-FMCB auf der Memory Card in Steckplatz 2 wird bereinigt. Fortfahren?
+YoshiBoot Autoboot auf der Memory Card in Steckplatz 1 wird bereinigt. Fortfahren?
+YoshiBoot Autoboot auf der Memory Card in Steckplatz 2 wird bereinigt. Fortfahren?
 FHDB auf der Festplatte wird bereinigt. Fortfahren?
 Die Memory Card in Steckplatz 1 wird formatiert.\n\nFortfahren?
 Die Memory Card in Steckplatz 2 wird formatiert.\n\nFortfahren?
@@ -47,21 +47,21 @@ Wiederherstellung der Memory Card abbrechen?
 Die Erstellung quervenetzter Dateien ist fehlgeschlagen.
 Anbindung von MagicGate Datei an Memory Card fehlgeschlagen.
 Gemachte Multi Installation durch inkompatiblen Installer kann nicht entfernt werden.
-FMCB für diese Konsole installieren.
-FMCB für alle Konsolen installieren.
-FMCB deinstallieren.
+YoshiBoot Autoboot für diese Konsole installieren.
+YoshiBoot Autoboot für alle Konsolen installieren.
+YoshiBoot Autoboot deinstallieren.
 Ändern einer Multi-Installation zu einer normalen Installation.
 Memory Card formatieren.
 Inhalt der Memory Card in Ordner speichern.
 Überschreibe Memory Card Inhalt aus Ordner.
-FMCB (PSX) auf diese Memory Card installieren..
+YoshiBoot Autoboot (PSX) auf diese Memory Card installieren..
 FHDB für diese Konsole installieren.
 FHDB deinstallieren.
 Programm verlassen.
 Es wurde ein Problem mit der Festplatte festgestellt.\nBitte Festplatte zuerst überprüfen.
 S.M.A.R.T. meldet Fehler auf der Festplatte.\nDie Festplatte muss ersetzt werden.
-Die Konsole ünterstützt kein FMCB.\n\nTrotzdem lassen sich.\nInstallationen mit ihr ausführen.
-Während die Multi-Installation die Erstellung einer auf allen Playstation 2 Konsolen lauffähigen FMCB Karte erlaubt, verletzt diese den MC Aufbau durch kontrollierte Beschädigung des Dateisystems.\nEs wird daher empfohlen anstatt dieser eine Normale Installation durchzuführen.
+Die Konsole ünterstützt kein YoshiBoot Autoboot.\n\nTrotzdem lassen sich.\nInstallationen mit ihr ausführen.
+Während die Multi-Installation die Erstellung einer auf allen Playstation 2 Konsolen lauffähigen YoshiBoot Autoboot Karte erlaubt, verletzt diese den MC Aufbau durch kontrollierte Beschädigung des Dateisystems.\nEs wird daher empfohlen anstatt dieser eine Normale Installation durchzuführen.
 Programm beenden?
 Die Festplatte (HDD) ist nicht formatiert. Formatieren?\nWarnung: Alle Daten werden gelöscht.
 Formatierung der Festplatte (HDD) fehlgeschlagen.

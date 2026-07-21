@@ -27,12 +27,12 @@ HDD (PS2 HDD Unit)
 残り時間：
 インストール (標準)
 マルチインストール
-FMCB のアンインストール
+YoshiBoot Autoboot のアンインストール
 マルチインストールのアンインストール
 メモリーカードのフォーマット
 メモリーカードのダンプ
 メモリーカードのリストア
-FMCB のインストール (PSX)
+YoshiBoot Autoboot のインストール (PSX)
 FHDB のインストール
 FHDB のアンインストール
 終了

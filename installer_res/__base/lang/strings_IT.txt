@@ -1,18 +1,18 @@
 ﻿Nessuna Memory Card (Playstation 2) trovata.
 Memory card presente in entrambi gli ingressi.\n\nSelezionare la memory card.
-FMCB sarà installato nella memory card presente nello slot 1. Continuare?
-FMCB sarà installato nella memory card presente nello slot 2. Continuare?
+YoshiBoot Autoboot sarà installato nella memory card presente nello slot 1. Continuare?
+YoshiBoot Autoboot sarà installato nella memory card presente nello slot 2. Continuare?
 FHDB sarà installato sull'unità Hard disk.\n\nContinuare?
-Installa FreeMcBoot per:
+Installa YoshiBoot Autoboot per:
 Inizializzazione della cache fallita.
-FMCB CNF già esistente!\n\nVuoi mantenerlo?
+YoshiBoot Autoboot CNF già esistente!\n\nVuoi mantenerlo?
 FHDB CNF già esistente!\n\nVuoi mantenerlo?
 Pulizia fallita.
 Installazione pulita effettuata con successo.
 Installazione fallita.
 Installazione completata.
-L'installazione FMCB presente sulla memory card dell'ingresso 1 verrà pulita.\n\nContinuare?
-L'installazione FMCB presente sulla memory card dell'ingresso 2 verrà pulita.\n\nContinuare?
+L'installazione YoshiBoot Autoboot presente sulla memory card dell'ingresso 1 verrà pulita.\n\nContinuare?
+L'installazione YoshiBoot Autoboot presente sulla memory card dell'ingresso 2 verrà pulita.\n\nContinuare?
 L'installazione FHDB presente nell'unità Hard disk Drive verrà pulita.\n\nContinuare?
 La memory card nell'ingresso 1 sarà formattata.\n\nContinuare?
 La memory card nell'ingresso 2 sarà formattata.\n\nContinuare?
@@ -47,21 +47,21 @@ Interrompere il ripristino della memory card?
 Creazione fallita dei file crosslinked.
 Associazione fallita dei file MagicGate alla memory card.
 Impossibile rimuovere una multi-installazione fatta con un installer non compatibile.
-Installa FMCB per questa console.
-Installa FMCB per tutte le console.
-Disinstalla FMCB.
+Installa YoshiBoot Autoboot per questa console.
+Installa YoshiBoot Autoboot per tutte le console.
+Disinstalla YoshiBoot Autoboot.
 Converte una multi-installazione in un'installazione normale.
 Formatta memory card.
 Riversa il contenuto della memory card in un file.
 Riversa il contenuto di un file nella memory card.
-Installa FMCB (PSX) sulla memory card.
+Installa YoshiBoot Autoboot (PSX) sulla memory card.
 Installa FHDB per questa console.
 Disinstalla FHDB.
 Esci dal programma.
 L'unità Hard disk (HDD) ha un problema. Effettuare un controllo prima.
 S.M.A.R.T. segnala che l'Hard disk (HDD) non è funzionante.\n\nL'unità dev'essere sostituita.
-Questa console non supporta FMCB.\n\nPuoi comunque fare altre installazioni.
-Nonostante la multi-installazione permetta di creare un FMCB in grado di avviarsi su tutte le PlayStation 2 occupando il minor spazio possibile, ciò va contro il design stesso delle Memory Card perché introduce una corruzione del filesystem controllata.\n\nÈ fortemente consigliata l'installazione normale al posto di questa.
+Questa console non supporta YoshiBoot Autoboot.\n\nPuoi comunque fare altre installazioni.
+Nonostante la multi-installazione permetta di creare un YoshiBoot Autoboot in grado di avviarsi su tutte le PlayStation 2 occupando il minor spazio possibile, ciò va contro il design stesso delle Memory Card perché introduce una corruzione del filesystem controllata.\n\nÈ fortemente consigliata l'installazione normale al posto di questa.
 Uscire dal programma?
 The HardDisk Drive (HDD) unit is not formatted. Format?\nWarning: All data will be erased.
 Failed to format the HardDisk Drive (HDD) unit.
