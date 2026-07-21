@@ -3,7 +3,9 @@ name: Build [All]
 on:
   workflow_dispatch:
     
-    
+env:
+  ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
+
 jobs:
   build-packages:
     runs-on: ubuntu-latest
@@ -19,7 +21,6 @@ jobs:
         fetch-depth: 0
 
     - run: |
-        env ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true
         git config --global --add safe.directory "$GITHUB_WORKSPACE"
         git fetch
 
@@ -29,14 +30,12 @@ jobs:
 
     - name: Compile
       run: |
-        env ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true
         cd installer
         make rebuild FMCB_INSTALLER_VERSION=${{ env.SHA8 }} EE_BIN_DIR=../installer_res/ 
         make rebuild FMCB_INSTALLER_VERSION=${{ env.SHA8 }} EE_BIN_DIR=../installer_res/ EXFAT=1
 
     - name: Prepare folder for Release
       run: |
-        env ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true
         cd installer_res
         ls
         chmod +x ./pack.sh
