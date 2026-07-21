@@ -11,13 +11,15 @@ jobs:
     steps:
     - name: Install dependencies
       run: |
+        env ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true
         apk add build-base git zip p7zip
 
-    - uses: actions/checkout@v7
+    - uses: actions/checkout@v3
       with:
         fetch-depth: 0
 
     - run: |
+        env ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true
         git config --global --add safe.directory "$GITHUB_WORKSPACE"
         git fetch
 
@@ -27,12 +29,14 @@ jobs:
 
     - name: Compile
       run: |
+        env ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true
         cd installer
         make rebuild FMCB_INSTALLER_VERSION=${{ env.SHA8 }} EE_BIN_DIR=../installer_res/ 
         make rebuild FMCB_INSTALLER_VERSION=${{ env.SHA8 }} EE_BIN_DIR=../installer_res/ EXFAT=1
 
     - name: Prepare folder for Release
       run: |
+        env ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true
         cd installer_res
         ls
         chmod +x ./pack.sh
@@ -40,7 +44,7 @@ jobs:
 
     - name: Upload artifact
       if: ${{ success() }}
-      uses: actions/upload-artifact@v7
+      uses: actions/upload-artifact@v3
       with:
         name: FMCB-${{ env.SHA8 }}
         path: |
