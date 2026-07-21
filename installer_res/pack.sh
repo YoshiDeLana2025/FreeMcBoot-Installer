@@ -3,7 +3,7 @@ PKG_DATE=$(date '+[%Y-%m-%d]')
 wget https://github.com/israpps/BDMAssault/releases/download/latest/BDMAssault.7z -O BDMAssault.7z
 7z x BDMAssault.7z READY_TO_USE/FreeMcBoot/
 cp ../Changelog.md __base/Changelog.md
-for subdir in 1966 1965 1964 1963 1953
+for subdir in YOSJ
 do
     echo packing v$subdir into ../FMCB-$subdir.7z
     NEWDIR="FMCBinst-$subdir-$PKG_DATE"

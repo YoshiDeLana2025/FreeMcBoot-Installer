@@ -2,13 +2,6 @@ name: Build [All]
 
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - 'installer/**'
-      - 'installer_res/**'
-      - '.github/workflows/compile-core.yml'
-  schedule:
-    - cron: "0 15 1 * *"
     
     
 jobs:
@@ -47,18 +40,8 @@ jobs:
 
     - name: Upload artifact
       if: ${{ success() }}
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v7
       with:
         name: FMCB-${{ env.SHA8 }}
         path: |
-            FMCB*.7z
-
-    - name: Create release
-      if: github.ref == 'refs/heads/master'
-      uses: marvinpinto/action-automatic-releases@latest
-      with:
-        repo_token: "${{ secrets.GITHUB_TOKEN }}"
-        automatic_release_tag: "latest"
-        title: "FreeMcBoot"
-        files: |
             FMCB*.7z

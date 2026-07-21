@@ -156,16 +156,13 @@ static struct InstallationFile BootROM101JUpdateFiles[ROM101J_UPDATE_NUM_FILES] 
 
 #define PS2_SYS_INSTALL_NUM_FILES 2
 static struct InstallationFile PS2SysFiles[PS2_SYS_INSTALL_NUM_FILES] = {
-    {"SYSTEM/FMCB.XLF",
+    {"SYSTEM/YOSHIBOOT.XLF",
      "BREXEC-SYSTEM/osdmain.elf",
-     FILE_IS_KELF},
-    {"SYSTEM/ENDVDPL.XRX",
-     "SYS-CONF/endvdpl.irx",
      FILE_IS_KELF}};
 
 #define DEX_SYS_INSTALL_NUM_FILES 1
 static struct InstallationFile DEXSysFiles[DEX_SYS_INSTALL_NUM_FILES] = {
-    {"SYSTEM/FMCB.XLF",
+    {"SYSTEM/YOSHIBOOT.XLF",
      "BREXEC-SYSTEM/osdmain.elf",
      FILE_IS_KELF}};
 
@@ -195,32 +192,35 @@ static struct InstallationFile PSXSysFiles[PSX_SYS_INSTALL_NUM_FILES] = {
 
 #define SYS_FOLDER_RESOURCES_NUM_FILES 2
 static struct InstallationFile SysResourceFiles[SYS_FOLDER_RESOURCES_NUM_FILES] = {
-    {"SYSTEM/FMCB.ICN",
-     "BREXEC-SYSTEM/FMCB.icn",
+    {"SYSTEM/YOSHBOOT.ICN",
+     "BREXEC-SYSTEM/yoshboot.icn",
      0},
     {"SYSTEM/ICON.SYS",
      "BREXEC-SYSTEM/icon.sys",
      0}};
 
-#define BASE_INSTALL_NUM_FILES 6
+#define BASE_INSTALL_NUM_FILES 7
 static struct InstallationFile BaseFiles[BASE_INSTALL_NUM_FILES] = {
-    {"SYS-CONF/FMCB_CFG.ELF",
-     "SYS-CONF/FMCB_CFG.ELF",
+    {"SYS-CONF/YOSHCONF.ELF",
+     "SYS-CONF/YOSHCONF.ELF",
      0},
-    {"SYS-CONF/FREEMCB.CNF",
-     "SYS-CONF/FREEMCB.CNF",
+    {"SYS-CONF/ULE.ELF",
+     "SYS-CONF/ULE.ELF",
      0},
-    {"SYS-CONF/ICON.SYS",
+    {"SYS-CONF/ULEBG.JPG",
+     "SYS-CONF/ULEBG.JPG",
+     0},
+    {"SYS-CONF/LAUNCHELF.CNF",
+     "SYS-CONF/LAUNCHELF.CNF",
+     0},
+    {"SYS-CONF/OSDMENU.CNF",
+     "SYS-CONF/OSDMENU.CNF",
+     0},
+    {"SYS-CONF/icon.sys",
      "SYS-CONF/icon.sys",
      0},
-    {"SYS-CONF/SYSCONF.ICN",
-     "SYS-CONF/sysconf.icn",
-     0},
-    {"SYS-CONF/USBD.IRX",
-     "SYS-CONF/USBD.IRX",
-     0},
-    {"SYS-CONF/USBHDFSD.IRX",
-     "SYS-CONF/USBHDFSD.IRX",
+    {"SYS-CONF/YOSHCONF.ICN",
+     "SYS-CONF/yoshconf.icn",
      0}};
 
 #define HDD_BASE_INSTALL_NUM_FILES 22
@@ -605,8 +605,8 @@ static int CreateBasicFolders(int port, int slot, unsigned int flags)
     unsigned int i;
     int result;
     char folders[][16] = {
-        "APPS",
-        "BOOT",
+        "OPL",
+        "POPSTARTER",
         "SYS-CONF",
         "\0"};
 
@@ -1667,15 +1667,15 @@ int PerformInstallation(unsigned char port, unsigned char slot, unsigned int fla
 
         // Add files in the BOOT folder to the file list.
         if (result >= 0) {
-            if ((result = AddDirContentsToFileCopyList(RootFolder, "BOOT", "BOOT", 1, &FileCopyList, &NumFiles, &NumDirectories, &TotalRequiredSpaceForFiles)) < 0) {
-                DEBUG_PRINTF("AddDirContentsToFileCopyList (BOOT) failed: %d\n", result);
+            if ((result = AddDirContentsToFileCopyList(RootFolder, "OPL", "OPL", 1, &FileCopyList, &NumFiles, &NumDirectories, &TotalRequiredSpaceForFiles)) < 0) {
+                DEBUG_PRINTF("AddDirContentsToFileCopyList (OPL) failed: %d\n", result);
             }
         }
 
         // Add files in the APPS folder to the file list.
         if (result >= 0) {
-            if ((result = AddDirContentsToFileCopyList(RootFolder, "APPS", "APPS", 1, &FileCopyList, &NumFiles, &NumDirectories, &TotalRequiredSpaceForFiles)) < 0) {
-                DEBUG_PRINTF("AddDirContentsToFileCopyList (APPS) failed: %d\n", result);
+            if ((result = AddDirContentsToFileCopyList(RootFolder, "POPSTARTER", " POPSTARTER", 1, &FileCopyList, &NumFiles, &NumDirectories, &TotalRequiredSpaceForFiles)) < 0) {
+                DEBUG_PRINTF("AddDirContentsToFileCopyList (POPSTARTER) failed: %d\n", result);
             }
         }
 
